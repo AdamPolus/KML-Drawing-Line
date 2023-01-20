@@ -12,13 +12,8 @@ y_wgs84=[]
 z_wgs84=[]
 
 f = open('drones/Drone 4/trajectory.json')
-
-# returns JSON object as
-# a dictionary
 data = json.load(f)
 
-# Iterating through the json
-# list
 for i in data['points']:
     x.append((i[1][0]+utm_x))
     y.append(i[1][1]+utm_y)
